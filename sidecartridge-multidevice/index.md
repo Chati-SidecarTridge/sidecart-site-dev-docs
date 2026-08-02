@@ -154,7 +154,7 @@ You can learn about the new features and improvements in the latest firmware rel
   <div class="apps-hero-head">
     <div>
       <h2>Apps Catalog</h2>
-      <p class="apps-hero-sub">Microfirmwares are small, self-contained programs that run on the Multi-device. Install them from the Booster app catalog with one click, or build your own from the template repo.</p>
+      <p class="apps-hero-sub">Microfirmwares are small, self-contained programs that run on the Multi-device. Install them from the Booster app catalog with one click, or <a href="https://md-store.sidecartridge.com/build/" target="_blank" rel="noopener">build your own</a> with the guided tutorial.</p>
     </div>
     <span class="apps-hero-chip">v2 firmware</span>
   </div>

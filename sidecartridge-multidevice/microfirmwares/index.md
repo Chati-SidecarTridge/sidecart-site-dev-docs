@@ -75,7 +75,7 @@ The available Microfirmware apps are listed in a public repository, which the Bo
 
 ### Developing Microfirmware Apps
 
-To develop your own Microfirmware apps, there is a  [template repository](https://github.com/sidecartridge/md-microfirmware-template) and follow the instructions in the [Programming Guide](/sidecartridge-multidevice/programming/).
+The quickest way in is the [Build a microfirmware](https://md-store.sidecartridge.com/build/) tutorial, a guided walkthrough from an empty template to an app listed in the Store. For the low-level reference, there is a [template repository](https://github.com/sidecartridge/md-microfirmware-template) and the [Programming Guide](/sidecartridge-multidevice/programming/).
 
 Each Microfirmware app should be a self-contained program that can run on the RP2040 or RP235x chip. It should include the necessary code to read the microSD card, communicate with the computer, and provide any additional features you want. 
 
