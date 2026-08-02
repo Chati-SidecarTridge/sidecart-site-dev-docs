@@ -49,69 +49,11 @@ This offline-safe launcher is useful when the access point is down, the router b
 
 ### Available Microfirmware Apps
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; margin-top: 1rem;">
+The full, always up to date catalog of Microfirmware apps lives in the online Apps Store. It reads the same public repository the Booster app uses, so the list you see there matches exactly what you can install on your device, including alpha and beta builds.
 
-<div style="background:#f8f9fa; border-radius:12px; padding:1rem; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-<h3>📀 <a href="/sidecartridge-multidevice/microfirmwares/rom_emulator/">ROM Emulator</a></h3>
-<p>An emulator for ROM files. Run games and apps from microSD or a remote server.</p>
-</div>
+<a href="https://md-store.sidecartridge.com/" class="btn btn-purple fs-5" target="_blank" rel="noopener" style="margin: 1rem 0; display: inline-block;">Browse the Apps Store</a>
 
-<div style="background:#f8f9fa; border-radius:12px; padding:1rem; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-<h3>⏰ <a href="/sidecartridge-multidevice/microfirmwares/rtc_emulator/">Real Time Clock Emulator</a></h3>
-<p>Provides RTC functionality, syncs with NTP servers, and emulates a DS1307 chip.</p>
-</div>
-
-<div style="background:#f8f9fa; border-radius:12px; padding:1rem; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-<h3>💾 <a href="/sidecartridge-multidevice/microfirmwares/drives_emulator/">Drives Emulator</a></h3>
-<p>Emulates hard and floppy drives with microSD-stored images. Includes RTC emulator.</p>
-</div>
-
-<div style="background:#f8f9fa; border-radius:12px; padding:1rem; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-<h3>🎵 <a href="/sidecartridge-multidevice/microfirmwares/mv16-emulator/">MV16 Emulator</a></h3>
-<p>Emulates the MV-16 audio device and routes its output to Bluetooth audio streaming.</p>
-</div>
-
-<div style="background:#f8f9fa; border-radius:12px; padding:1rem; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-<h3>🧪 <a href="/sidecartridge-multidevice/microfirmwares/multidevice-test/">Multi-device Test ROM</a></h3>
-<p>A diagnostic tool to validate functionality and performance of your device.</p>
-</div>
-
-<div style="background:#f8f9fa; border-radius:12px; padding:1rem; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-<h3>🌐 <a href="/sidecartridge-multidevice/microfirmwares/browser/">File & Download Manager</a></h3>
-<p>Browse and download from the public floppy DB. Manage files on your microSD card.</p>
-</div>
-
-<div style="background:#f8f9fa; border-radius:12px; padding:1rem; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-<h3>🐞 <a href="/sidecartridge-multidevice/microfirmwares/debug-cart/">Debug Cart</a></h3>
-<p>Expose debug output from Atari ST-family software through the cartridge port over USB serial.</p>
-</div>
-
-<div style="background:#f8f9fa; border-radius:12px; padding:1rem; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-<h3>🎨 <a href="/sidecartridge-multidevice/microfirmwares/gpu-demo/">GPU Demo</a></h3>
-<p>Showcases RP2040 graphics: real-time sprites and tiles in Atari ST/STE modes.</p>
-</div>
-
-<div style="background:#f8f9fa; border-radius:12px; padding:1rem; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-<h3>🕹️ <a href="/sidecartridge-multidevice/microfirmwares/oric-emulator/">Oric Emulator</a></h3>
-<p>Emulates an Oric computer on Atari ST-class machines via the Multi-device.</p>
-</div>
-
-<div style="background:#f8f9fa; border-radius:12px; padding:1rem; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-<h3>🛠️ <a href="/sidecartridge-multidevice/microfirmwares/devops/">DevOps</a></h3>
-<p>Remote m68k development surface: GEMDRIVE, Runner mode, HTTP API and live debug traces.</p>
-</div>
-
-<div style="background:#f8f9fa; border-radius:12px; padding:1rem; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-<h3>📜 <a href="/sidecartridge-multidevice/microfirmwares/md-js/">MD/JS JavaScript Worker</a></h3>
-<p>A persistent JerryScript runtime on the RP2040. Upload JS from your ST, call functions with JSON, use <code>fetch()</code>. By Neil Rackett.</p>
-</div>
-
-<div style="background:#f8f9fa; border-radius:12px; padding:1rem; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-<h3>🎼 <a href="/sidecartridge-multidevice/microfirmwares/midi-to-ip/">MIDI-to-IP</a></h3>
-<p>Carries the ST's MIDI traffic over Wi-Fi / TCP through a small orchestrator, so up to 16 STs (real or Hatari) play MIDI Maze over IP without cables.</p>
-</div>
-
-</div>
+Every app in the Store links back to its documentation page here in the docs. You can also open any app page directly from the navigation sidebar on the left.
 
 ### How it works:
 
