@@ -93,13 +93,13 @@ The **ACSI2STM** adapter introduces additional flexibility for configuring devic
 - It features a set of pads labeled **ID_SHIFT**, allowing users to adjust the device IDs of its SD slots.
 - These pads also affect the mapping of **GemDrive drive letters**.
 - **Default:** Every ACSI2STM ships set to **ACSI ID 0**, with no bridge applied.
-- **Limitations:** The ACSI2STM cannot freely map to all 8 IDs, so it is essential to consult its documentation for specific ID ranges and configurations.
+- **Limitations:** The ACSI2STM does not expose all 8 IDs freely. It moves a fixed range of consecutive IDs, described in the next section.
 
 #### Setting the ID_SHIFT
 
-The **ID_SHIFT** selector has four possible settings. Bridging one of them shifts the base ACSI ID of the device. The layout comes from the official ACSI2STM open hardware documentation, and because ACSI2STM is open hardware we build the board exactly to that reference without changing the jumper layout. Upstream reference: [ACSI2STM jumpers documentation](https://github.com/retro16/acsi2stm/blob/stable/doc/jumpers.md).
+The **ID_SHIFT** selector has four possible settings. Each label is the range of consecutive ACSI IDs that the SD slots occupy, a naming inherited from the original three-slot ACSI2STM design. With no bridge the slots use ACSI IDs 0 to 2, and bridging a position shifts that range to 1-3, 2-4 or 3-5. The board assigns IDs starting at the base of the range, so a single-slot unit like the Mini ends up at the base ID itself (0, 1, 2 or 3). The layout comes from the official ACSI2STM open hardware documentation, and because ACSI2STM is open hardware we build the board exactly to that reference without changing the jumper layout. Upstream reference: [ACSI2STM jumpers documentation](https://github.com/retro16/acsi2stm/blob/stable/doc/jumpers.md).
 
-| ID_SHIFT | Bridge | Base ACSI ID |
+| ID_SHIFT (ACSI ID range) | Bridge | Base ID |
 | --- | --- | --- |
 | 0-2 | No bridge (factory default) | 0 |
 | 1-3 | Connect pads 0 and 1 | 1 |
