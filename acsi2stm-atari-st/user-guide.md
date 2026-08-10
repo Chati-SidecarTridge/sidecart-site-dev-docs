@@ -90,9 +90,31 @@ While most Atari ST models rely solely on external ACSI devices, the **Mega STE*
 ### ACSI2STM ID Configuration
 
 The **ACSI2STM** adapter introduces additional flexibility for configuring device IDs:
-- It features a set of jumpers labeled **ID_SHIFT**, allowing users to adjust the device IDs of its SD slots.
-- These jumpers also affect the mapping of **GemDrive drive letters**.
-- **Limitations:** The ACSI2STM cannot freely map to all 8 IDs, so it is essential to consult its documentation for specific ID ranges and configurations.  
+- It features a set of pads labeled **ID_SHIFT**, allowing users to adjust the device IDs of its SD slots.
+- These pads also affect the mapping of **GemDrive drive letters**.
+- **Default:** Every ACSI2STM ships set to **ACSI ID 0**, with no bridge applied.
+- **Limitations:** The ACSI2STM cannot freely map to all 8 IDs, so it is essential to consult its documentation for specific ID ranges and configurations.
+
+#### Setting the ID_SHIFT
+
+The **ID_SHIFT** selector has four possible settings. Bridging one of them shifts the base ACSI ID of the device. The layout comes from the official ACSI2STM open hardware documentation, and because ACSI2STM is open hardware we build the board exactly to that reference without changing the jumper layout. Upstream reference: [ACSI2STM jumpers documentation](https://github.com/retro16/acsi2stm/blob/stable/doc/jumpers.md).
+
+| ID_SHIFT | Bridge | Base ACSI ID |
+| --- | --- | --- |
+| 0-2 | No bridge (factory default) | 0 |
+| 1-3 | Connect pads 0 and 1 | 1 |
+| 2-4 | Connect pads 1 and 2 | 2 |
+| 3-5 | Connect pads 2 and 3 | 3 |
+
+The physical layout of the pads depends on the model. On the **ACSI2STM Mini** they are horizontal surface mount pads, ordered 3, 2, 1, 0 from left to right. On the **ACSI2STM Compact** they are vertical through holes, ordered 3, 2, 1, 0 from top to bottom. The labels and the bridge behaviour are identical on both.
+
+**ACSI2STM Mini (surface mount pads):**
+
+![ACSI2STM Mini ID_SHIFT jumper settings](/acsi2stm-atari-st/assets/images/ACSI2STM-MINI-ID_SHIFT.jpg)
+
+**ACSI2STM Compact (through hole pads):**
+
+![ACSI2STM Compact ID_SHIFT jumper settings](/acsi2stm-atari-st/assets/images/ACSI2STM-COMPACT-ID_SHIFT.jpg)
 
 By properly managing ACSI IDs and understanding device-specific configurations, you can maximize the compatibility and reliability of your Atari ST setup.
 
