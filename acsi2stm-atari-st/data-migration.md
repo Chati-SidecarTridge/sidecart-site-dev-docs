@@ -57,7 +57,11 @@ Getting both devices to mount at the same time is precisely the step where the d
 
 ## Method 2: Copy between two native ACSI drivers
 
-Rather than mixing an old native driver with GEMDRIVE, set the ACSI2STM up with a legacy ACSI image driven by a modern native ACSI driver such as PPERA or HDDRIVER. You keep the old disk on its original native driver on one ID and the ACSI2STM on another ID, boot with both present, and copy the files across. Because both sides then speak the same classic ACSI driver model, this coexistence tends to behave more predictably than pairing a native driver with GEMDRIVE. The trade off is more work up front: you prepare the image and install the driver on it before you start. See [Creating images for the ACSI mode](/acsi2stm-atari-st/before-buy/#creating-images-for-the-acsi-mode) and the [`atari-hd`](https://github.com/sidecartridge/atari-hd) tool.
+Rather than mixing an old native driver with GEMDRIVE, set the ACSI2STM up with a legacy ACSI image driven by a modern native ACSI driver such as PPERA or HDDRIVER. You keep the old disk on its original native driver on one ID and the ACSI2STM on another ID, boot with both present, and copy the files across.
+
+This procedure works when two conditions are met. First, the driver that loads first must be able to understand the format of the second disk, so that a single driver can present both devices at once. Second, the ACSI IDs of the devices must be contiguous, with no gaps between them. Some drivers scan the whole bus regardless, but others stop as soon as they hit an ID with no disk on it, so a gap can leave the second device invisible.
+
+The trade off compared with GEMDRIVE is more work up front: you prepare the image and install the driver on it before you start. See [Creating images for the ACSI mode](/acsi2stm-atari-st/before-buy/#creating-images-for-the-acsi-mode) and the [`atari-hd`](https://github.com/sidecartridge/atari-hd) tool.
 
 ## Method 3: Image the whole old disk (advanced)
 
