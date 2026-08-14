@@ -67,6 +67,12 @@ The trade off compared with GEMDRIVE is more work up front: you prepare the imag
 
 If you have a way to read the old ACSI disk at block level on another system, you can capture a full image of it and run that image on the ACSI2STM in ACSI mode, preserving the exact original layout. This depends heavily on the hardware you have available to read a vintage ACSI drive, so it is beyond what this guide can cover generically. The community image and driver resources linked in [Creating images for the ACSI mode](/acsi2stm-atari-st/before-buy/#creating-images-for-the-acsi-mode) are a good starting point if you want to go this route.
 
+## Method 4: Take a different route with the SidecarTridge MultiDevice
+
+Getting two heterogeneous disks with different drivers and different formats to coexist on the same ACSI bus is often very hard. When that is the case, one option is to step off the ACSI bus altogether and use the [SidecarTridge MultiDevice](/sidecartridge-multidevice/). It creates virtual disks and carries its own implementation of GEMDRIVE that runs over the cartridge port rather than the ACSI bus, so it sidesteps the driver and bus conflicts entirely. That makes it a solid alternative when the migration on the ACSI side gets messy.
+
+Keep in mind that moving data from one disk to another is not a flip of a switch but a properly planned and structured project. This is simply one more alternative to have in your toolbox.
+
 ## After the migration
 
 - Once your data is on an SD card or in an image file, back it up on a PC. This is one of the biggest practical wins of moving off a mechanical drive: a copy of the whole volume is now a single file.
