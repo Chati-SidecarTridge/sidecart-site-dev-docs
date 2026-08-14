@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Internal riser boards for Mega ST and Mega STE
-nav_order: 8
+nav_order: 9
 nav_exclude: false
 parent: ACSI2STM Hard Disk for Atari ST
 ---

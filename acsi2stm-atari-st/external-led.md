@@ -1,7 +1,7 @@
 ---
 layout: default
 title: External LED
-nav_order: 4
+nav_order: 5
 nav_exclude: false
 parent: ACSI2STM Hard Disk for Atari ST
 ---
@@ -82,6 +82,6 @@ Start with values like **220Ω for ~6mA**, or **470Ω for ~3mA**, depending on y
 > ⚠️ **Important:** Do **not** leave both resistors in place — using the SMD and through-hole resistor together will reduce total resistance too much and may damage the LED or overdraw GPIO current.
 
 
-[Previous: User Guide](/acsi2stm-atari-st/user-guide){: .btn .mr-4 }
+[Previous: Migrating data from an old hard disk](/acsi2stm-atari-st/data-migration/){: .btn .mr-4 }
 [Main](/acsi2stm-atari-st/){: .btn .mr-4 }
 [Next: Troubleshooting](/acsi2stm-atari-st/troubleshooting/){: .btn }
