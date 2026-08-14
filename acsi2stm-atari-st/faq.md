@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Frequently Asked Questions
-nav_order: 6
+nav_order: 7
 nav_exclude: false
 parent: ACSI2STM Hard Disk for Atari ST
 ---

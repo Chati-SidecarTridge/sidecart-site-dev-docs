@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Manufacturing files and open hardware
-nav_order: 9
+nav_order: 10
 nav_exclude: false
 parent: ACSI2STM Hard Disk for Atari ST
 ---

@@ -273,4 +273,4 @@ If you need to flash the firmware to the STM32 microcontroller, you will need a 
 
 [Previous: Before You Buy](/acsi2stm-atari-st/before-buy/){: .btn .mr-4 }
 [Main](/acsi2stm-atari-st/){: .btn .mr-4 }
-[Next: External LED](/acsi2stm-atari-st/external-led/){: .btn }
+[Next: Migrating data from an old hard disk](/acsi2stm-atari-st/data-migration/){: .btn }
