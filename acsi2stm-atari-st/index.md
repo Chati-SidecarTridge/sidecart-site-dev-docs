@@ -120,6 +120,12 @@ The **ACSI2STM Mini** offers the **same full feature set as its bigger brother, 
 
   <div class="toc-card">
     <span class="toc-chip chip-howto">How-to</span>
+    <h3>💽 <a href="/acsi2stm-atari-st/data-migration/">Migrating data from an old hard disk</a></h3>
+    <p>How to move your files from an ageing ACSI hard disk onto the ACSI2STM, and what to expect along the way.</p>
+  </div>
+
+  <div class="toc-card">
+    <span class="toc-chip chip-howto">How-to</span>
     <h3>🛠️ <a href="/acsi2stm-atari-st/external-led/">External Activity LED</a></h3>
     <p>How to connect an external activity LED to the ACSI2STM</p>
   </div>
