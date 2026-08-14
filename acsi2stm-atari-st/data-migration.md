@@ -39,6 +39,9 @@ Before copying anything, decide what the data should live on once it is on the A
 
 For most people who simply want their files on modern storage, GEMDRIVE is the easier destination.
 
+{: .warning}
+GEMDRIVE was designed for easy access and storage, not for coexistence with old drive units. In our experience it is more reliable to copy from a legacy ACSI drive to a legacy mode ACSI image in the ACSI2STM unit. If GEMDRIVE works as an alternative with your unit and driver, go for it, but expect a bumpy ride.
+
 ## Method 1: Copy files with both devices connected
 
 This is the most common approach. You connect the old hard disk and the ACSI2STM at the same time, boot the machine so both are visible, and copy the files across from one to the other on the Atari itself.
@@ -52,7 +55,11 @@ This is the most common approach. You connect the old hard disk and the ACSI2STM
 {: .note}
 Getting both devices to mount at the same time is precisely the step where the driver conflicts show up. If the machine boots only one of the two, work out which driver each disk uses and its version, then in what order each one loads at boot. That is where the answer lives. There is no single setting that forces both to mount at once, so treat this as trial and error rather than a switch to flip.
 
-## Method 2: Image the whole old disk (advanced)
+## Method 2: Copy between two native ACSI drivers
+
+Rather than mixing an old native driver with GEMDRIVE, set the ACSI2STM up with a legacy ACSI image driven by a modern native ACSI driver such as PPERA or HDDRIVER. You keep the old disk on its original native driver on one ID and the ACSI2STM on another ID, boot with both present, and copy the files across. Because both sides then speak the same classic ACSI driver model, this coexistence tends to behave more predictably than pairing a native driver with GEMDRIVE. The trade off is more work up front: you prepare the image and install the driver on it before you start. See [Creating images for the ACSI mode](/acsi2stm-atari-st/before-buy/#creating-images-for-the-acsi-mode) and the [`atari-hd`](https://github.com/sidecartridge/atari-hd) tool.
+
+## Method 3: Image the whole old disk (advanced)
 
 If you have a way to read the old ACSI disk at block level on another system, you can capture a full image of it and run that image on the ACSI2STM in ACSI mode, preserving the exact original layout. This depends heavily on the hardware you have available to read a vintage ACSI drive, so it is beyond what this guide can cover generically. The community image and driver resources linked in [Creating images for the ACSI mode](/acsi2stm-atari-st/before-buy/#creating-images-for-the-acsi-mode) are a good starting point if you want to go this route.
 
