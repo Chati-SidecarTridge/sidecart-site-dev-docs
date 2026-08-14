@@ -43,7 +43,7 @@ Before copying anything, decide what the data should live on once it is on the A
 For most people who simply want their files on modern storage, GEMDRIVE is the easier destination.
 
 {: .warning}
-GEMDRIVE was designed for easy access and storage, not for coexistence with old drive units. In our experience it is more reliable to copy from a legacy ACSI drive to a legacy mode ACSI image in the ACSI2STM unit. If GEMDRIVE works as an alternative with your unit and driver, go for it, but expect a bumpy ride.
+GEMDRIVE was designed for easy access and storage, not for coexistence with old drive units. In our experience it is more reliable to copy from a legacy ACSI drive to a legacy mode ACSI image in the ACSI2STM unit. If GEMDRIVE works as an alternative with your unit and driver, go for it, but expect a bumpy ride. Older reports of GEMDRIVE being unusable alongside an old disk come from earlier firmware; newer firmware has worked in this scenario, so it is worth trying, but proceed with caution and verify every copy.
 
 ## Method 1: Copy files with both devices connected
 
@@ -60,7 +60,9 @@ Getting both devices to mount at the same time is precisely the step where the d
 
 ## Method 2: Copy between two native ACSI drivers
 
-Rather than mixing an old native driver with GEMDRIVE, set the ACSI2STM up with a legacy ACSI image driven by a modern native ACSI driver such as PPERA or HDDRIVER. You keep the old disk on its original native driver on one ID and the ACSI2STM on another ID, boot with both present, and copy the files across.
+Rather than mixing an old native driver with GEMDRIVE, set the ACSI2STM up with a legacy ACSI image driven by a native ACSI driver. You keep the old disk on its original native driver on one ID and the ACSI2STM on another ID, boot with both present, and copy the files across.
+
+A very old driver such as ICD is often the safest first choice here, precisely because it is the kind of driver the original disks already used, so it is the most likely to read the old disk correctly. Modern drivers such as HDDRIVER or PPERA can also work, but they may not read a vintage disk reliably, so test carefully before you trust them with your only copy of the data.
 
 This procedure works when two conditions are met. First, the driver that loads first must be able to understand the format of the second disk, so that a single driver can present both devices at once. Second, the ACSI IDs of the devices must be contiguous, with no gaps between them. Some drivers scan the whole bus regardless, but others stop as soon as they hit an ID with no disk on it, so a gap can leave the second device invisible.
 
