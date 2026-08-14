@@ -31,6 +31,16 @@ We have tested the ACSI2STM device with different TOS versions and modes, but in
 
 If you need support for large size partitions in older TOS versions, the [SidecarTridge MultiDevice](/sidecartridge-multidevice/) GEMDRIVE is a good alternative.
 
+### Formatting microSD cards for GEMDRIVE mode
+
+In GEMDRIVE mode the ACSI2STM reads the microSD card directly as a standard FAT filesystem, so the way the card is formatted matters. The formatting tools built into desktop operating systems are not always suitable for this, and some additional third-party utilities can alter the low-level layout in ways the Atari side will not accept, even when the card looks perfectly fine on your PC or Mac.
+
+The best way to prepare a card for your GEMDRIVE images is to format it first with the official SD Association tool:
+
+- [SD Memory Card Formatter (SD Association)](https://www.sdcard.org/downloads/formatter/)
+
+Starting from a clean layout produced by this tool will save you a lot of headaches before you copy any files onto the card.
+
 ### Creating images for the ACSI mode
 
 If you wan to use the legacy ACSI mode you will need to create images for the ACSI mode, or find already created images. 
