@@ -28,7 +28,7 @@ The device you use has a large impact on how hard the migration gets. All three 
 2. **[ACSI2STM Compact](https://sidecartridge.com/products/acsi2stm-atari-st).** Same port as your old drive, different technology. You have to deal first with the problems of sharing the ACSI port and its daisy chain, and then with driver compatibility on top. It is built for chaining, so the physical side is manageable, but it asks more of you than the MultiDevice.
 3. **[ACSI2STM Mini](https://sidecartridge.com/products/acsi2stm-mini-atari-st).** The same challenges as the Compact, plus two of its own. It is not meant to be chained on the ACSI bus, so it depends on the electronics of the other devices already on the bus behaving well. And changing its ACSI ID means soldering small pads, which is harder for anyone with limited soldering skills.
 
-If you own more than one of these, reach for the one higher on this list before the one below it.
+If you own more than one of these, reach for the one higher on this list before the one below it. The step by step methods below cover both routes: Methods 1 to 3 walk through an ACSI2STM on the ACSI bus (Compact or Mini), and Method 4 covers the MultiDevice workflow that tops this list.
 
 ## Set your expectations first
 
@@ -82,11 +82,11 @@ The trade off compared with GEMDRIVE is more work up front: you prepare the imag
 
 If you have a way to read the old ACSI disk at block level on another system, you can capture a full image of it and run that image on the ACSI2STM in ACSI mode, preserving the exact original layout. This depends heavily on the hardware you have available to read a vintage ACSI drive, so it is beyond what this guide can cover generically. The community image and driver resources linked in [Creating images for the ACSI mode](/acsi2stm-atari-st/before-buy/#creating-images-for-the-acsi-mode) are a good starting point if you want to go this route.
 
-## Method 4: Take a different route with the SidecarTridge MultiDevice
+## Method 4: Copy over the cartridge port with the SidecarTridge MultiDevice
 
-Getting two heterogeneous disks with different drivers and different formats to coexist on the same ACSI bus is often very hard. When that is the case, one option is to step off the ACSI bus altogether and use the [SidecarTridge MultiDevice](/sidecartridge-multidevice/). It creates virtual disks and carries its own implementation of GEMDRIVE that runs over the cartridge port rather than the ACSI bus, so it sidesteps the driver and bus conflicts entirely. That makes it a solid alternative when the migration on the ACSI side gets messy.
+As noted in the prerequisites, this is the smoothest of the routes, which is why it sits at the top of the device list. Getting two heterogeneous disks with different drivers and formats to coexist on the same ACSI bus is often very hard, so instead of fighting that you step off the ACSI bus altogether and use the [SidecarTridge MultiDevice](/sidecartridge-multidevice/). It creates virtual disks and carries its own implementation of GEMDRIVE that runs over the cartridge port rather than the ACSI bus, so the physical bus and driver conflicts of the other methods are gone from the outset. You may still meet driver questions on the Atari side, but the bus level clashes never appear.
 
-Keep in mind that moving data from one disk to another is not a flip of a switch but a properly planned and structured project. This is simply one more alternative to have in your toolbox.
+Keep in mind that moving data from one disk to another is still a properly planned and structured project rather than a flip of a switch. What this route removes is the ACSI bus sharing, not the need to plan the migration.
 
 ## After the migration
 
