@@ -41,7 +41,7 @@ This is a tricky area, and even experienced users hit friction here. For a candi
 If your Atari ST is heavily modified (non stock TOS, accelerators, alternative hard disk controllers, custom drivers), be aware that modified machines behave in less predictable ways. Some of those modifications ship with their own hard disk units and drivers, and those can interact with the migration in ways that are specific to your setup. Study your own machine before you change anything.
 
 {: .warning}
-Study the documentation in depth before you start this project. Do your homework and do not just read it, study it, because you are going to need it. We regularly meet users who lack not only the specific knowledge this migration requires but even the basic groundwork that a careful read of the documentation would have given them. Please also keep our scope in mind: we do not offer data migration services, and we are not an assistant you can query every time you get stuck. We provide support for the device, and that is where it ends.
+Study the documentation in depth before you start this project. Do your homework and do not just read it, study it, because you are going to need it. We regularly meet users who lack not only the specific knowledge this migration requires but even the basic groundwork that a careful read of the documentation would have given them. Please also keep our scope in mind: **we do not offer data migration services, and we are not an assistant you can query every time you get stuck**. We provide support for the device, and that is where it ends.
 
 ## Choose your target format
 
