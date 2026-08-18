@@ -20,6 +20,16 @@ Many people reach the ACSI2STM after years of running a real vintage hard disk o
 {:toc}
 </details>
 
+## Prerequisites: pick the device that fits the migration
+
+The device you use has a large impact on how hard the migration gets. All three of our store options can do the job, but they do not carry the same amount of friction. Here they are in order, from the smoothest path to the most demanding.
+
+1. **[SidecarTridge MultiDevice](https://sidecartridge.com/products/sidecartridge-multidevice-atari-st).** The easiest starting point. It uses a different port and a different technology from the ACSI bus, so it lets you copy data without fighting the physical problems of sharing the ACSI port with your old drive in the first place. You may still run into driver questions on the Atari side, but the bus level conflicts are gone from the outset.
+2. **[ACSI2STM Compact](https://sidecartridge.com/products/acsi2stm-atari-st).** Same port as your old drive, different technology. You have to deal first with the problems of sharing the ACSI port and its daisy chain, and then with driver compatibility on top. It is built for chaining, so the physical side is manageable, but it asks more of you than the MultiDevice.
+3. **[ACSI2STM Mini](https://sidecartridge.com/products/acsi2stm-mini-atari-st).** The same challenges as the Compact, plus two of its own. It is not meant to be chained on the ACSI bus, so it depends on the electronics of the other devices already on the bus behaving well. And changing its ACSI ID means soldering small pads, which is harder for anyone with limited soldering skills.
+
+If you own more than one of these, reach for the one higher on this list before the one below it.
+
 ## Set your expectations first
 
 Moving data from a 40 year old ACSI hard disk to a modern device is not a one click operation, and it is fair to say it is one of the more demanding tasks in the Atari ST hobby. You are dealing with two different storage devices on the same bus, each with its own driver and boot behaviour, plus the well known quirks of TOS on top. Plan the migration as a small project, not a quick fix, and give yourself time to work through it step by step.
