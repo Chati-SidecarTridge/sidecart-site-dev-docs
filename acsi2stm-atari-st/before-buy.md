@@ -14,7 +14,7 @@ The ACSI2STM Hard Disk device is designed to work with all Atari ST, Mega ST, ST
 
 There is a known issue with some Atari STE models that causes the ACSI2STM device to malfunction due to flaw in the design of the DMA chip used in some models. This issue will corrupt the content of the SD card making the content unreadable. The issue is known as the "Bad-DMA" issue and it is present in some Atari STE models. We strongly recommend to check if your Atari STE model is affected by this issue before purchasing the ACSI2STM device. You can find more information about this issue [here](https://www.exxosforum.co.uk/atari/last/DMAfix/index.htm).
 
-There is a new version of the firmware that can be used to avoid the Bad-DMA issue at the price of a much slower performance. You can find more information about this firmware [here](https://github.com/retro16/acsi2stm/blob/stable/doc/tutorial.md).
+There is a new version of the firmware that can be used to avoid the Bad-DMA issue at the price of a much slower performance. You can find more information about this firmware [here](https://github.com/retro16/acsi2stm/blob/stable/doc/firmware.md).
 
 {: .warning}
 The firmware I install in the ACSI2STM devices is the latest stable version but it does not include the Bad-DMA fix. If you want to install the Bad-DMA fix firmware, you must install the PIO firmware version at your own risk.
