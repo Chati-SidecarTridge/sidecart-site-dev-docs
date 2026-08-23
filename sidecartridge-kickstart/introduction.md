@@ -69,7 +69,7 @@ In summary, the SidecarTridge Kickstart emulator is designed to make Kickstart m
 
 2. **Multi-Kickstart Version Support**: With 16MB of flash memory, users can store dozens of 256KB and 512KB Kickstart images and custom ROMs and switch between them without requiring physical ROM swaps.
 
-3. **Custom ROM Support**: The emulator can run any ROM image file, including custom ROMs and open-source replacements like [EmuTOS](https://emutos.sourceforge.io/) or diagnose ROMs like [DiagROM](https://diagrom.com/). This enables users to experiment with various firmware options and enhance the functionality of the Amiga.
+3. **Custom ROM Support**: The emulator can run any ROM image file, including custom ROMs and open-source replacements like [EmuTOS](https://emutos.sourceforge.io/) or diagnose ROMs like [DiagROM](https://www.diagrom.com/). This enables users to experiment with various firmware options and enhance the functionality of the Amiga.
 
 4. **Compact Design**: The carrier boards for the ROM emulator board fit seamlessly inside the Amiga case.
 
