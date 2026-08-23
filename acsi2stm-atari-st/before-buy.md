@@ -66,7 +66,7 @@ For the deeper background on TOS-side BPBs, sector sizes and how the partition t
 
 ICD Pro is a free driver that can be used with ACSI devices. You can download from here: [ICD Pro](http://joo.kie.sk/?page_id=306). Then you can follow the instructions in this [guide](http://joo.kie.sk/?page_id=306).
 
-HDDRIVER is a commercial driver that can be used with ACSI devices. You can download from here: [hddriver.net](https://www.hddriver.net/). You can download a demo version from [here](https://www.hddriver.net/downloads/hddrdemo125_scsi.img).
+HDDRIVER is a commercial driver that can be used with ACSI devices. You can download from here: [hddriver.net](https://www.hddriver.net/). You can download a demo version from [here](https://www.hddriver.net/en/downloads.html).
 
 You can learn more about the different options in the [official documentation](https://github.com/retro16/acsi2stm/blob/stable/doc/compatibility.md).
 
