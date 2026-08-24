@@ -85,10 +85,10 @@ Select the kit that matches your motherboard revision. The A500 family is covere
 
 | SidecarTridge Kickstart Emulator Kit | Supported boards |
 |--------------------------------------|-----------------|
-| [A500 carrier rev5 and earlier](https://store.sidecartridge.com) | A500 rev3, A500 rev5 |
-| [A500 carrier rev6 and later](https://store.sidecartridge.com)   | A500 rev6a |
-| [A2000 carrier rev4.2 and earlier](https://store.sidecartridge.com) | A2000 rev4.2 and earlier |
-| [A2000 carrier rev4.3 and later](https://store.sidecartridge.com)   | A2000 rev4.3 and later |
+| [A500 carrier rev5 and earlier](https://sidecartridge.com/products/sidecartridge-kickstart-amiga/) | A500 rev3, A500 rev5 |
+| [A500 carrier rev6 and later](https://sidecartridge.com/products/sidecartridge-kickstart-amiga/)   | A500 rev6a |
+| [A2000 carrier rev4.2 and earlier](https://sidecartridge.com/products/sidecartridge-kickstart-amiga/) | A2000 rev4.2 and earlier |
+| [A2000 carrier rev4.3 and later](https://sidecartridge.com/products/sidecartridge-kickstart-amiga/)   | A2000 rev4.3 and later |
 
 
 ## Notes on Kickstart ROM sources
