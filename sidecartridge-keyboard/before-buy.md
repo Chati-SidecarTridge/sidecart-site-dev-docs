@@ -64,9 +64,10 @@ Avoid unknown or very low-quality devices unless you are willing to experiment.
 
 If everything above looks correct, you are ready to order.
 
-Go to:
+Go to the product page for your model:
 
-https://store.sidecartridge.com/
+- [SidecarTridge Croissant (Atari ST)](https://sidecartridge.com/products/sidecartridge-croissant-atari-st/)
+- [SidecarTridge Souffle (Mega ST)](https://sidecartridge.com/products/sidecartridge-souffle-mega-st/)
 
 After receiving the device, continue with the next chapter:
 
