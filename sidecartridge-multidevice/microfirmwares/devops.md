@@ -219,4 +219,4 @@ Made with ❤️ by [SidecarTridge](https://sidecartridge.com)
 
 [Previous: Oric Emulator](/sidecartridge-multidevice/microfirmwares/oric-emulator/){: .btn .mr-4 }
 [Main](/sidecartridge-multidevice/){: .btn .mr-4 }
-[Next: MD/JS JavaScript Worker](/sidecartridge-multidevice/microfirmwares/md-js/){: .btn }
+[Next: MIDI-to-IP](/sidecartridge-multidevice/microfirmwares/midi-to-ip/){: .btn }

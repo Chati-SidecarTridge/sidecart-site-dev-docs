@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Cubase Dongle Emulator
-nav_order: 8
+nav_order: 7
 nav_exclude: true
 parent: SidecarTridge Multi-device
 redirect_from:
