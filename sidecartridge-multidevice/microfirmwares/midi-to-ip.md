@@ -1,7 +1,7 @@
 ---
 layout: default
 title: MIDI-to-IP
-nav_order: 7
+nav_order: 6
 nav_exclude: true
 parent: SidecarTridge Multi-device
 redirect_from:
@@ -237,6 +237,6 @@ If you are building your own microfirmware with an AI coding agent (or want to r
 
 The source code of MIDI-to-IP is licensed under the GNU General Public License v3.0. The full license is in the [LICENSE](https://github.com/sidecartridge/md-MIDI2IP/blob/main/LICENSE) file in the repository.
 
-[Previous: MD/JS](/sidecartridge-multidevice/microfirmwares/md-js/){: .btn .mr-4 }
+[Previous: DevOps](/sidecartridge-multidevice/microfirmwares/devops/){: .btn .mr-4 }
 [Main](/sidecartridge-multidevice/){: .btn .mr-4 }
 [Next: Cubase Dongle Emulator](/sidecartridge-multidevice/microfirmwares/cubase-dongles/){: .btn }
