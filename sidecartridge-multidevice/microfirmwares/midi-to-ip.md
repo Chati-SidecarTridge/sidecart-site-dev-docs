@@ -239,4 +239,4 @@ The source code of MIDI-to-IP is licensed under the GNU General Public License v
 
 [Previous: MD/JS](/sidecartridge-multidevice/microfirmwares/md-js/){: .btn .mr-4 }
 [Main](/sidecartridge-multidevice/){: .btn .mr-4 }
-[Next: Architecture and Design](/sidecartridge-multidevice/architecture_and_design/){: .btn }
+[Next: Cubase Dongle Emulator](/sidecartridge-multidevice/microfirmwares/cubase-dongles/){: .btn }
