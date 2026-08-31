@@ -19,6 +19,8 @@ redirect_from:
 [Report BUG](https://github.com/sidecartridge/md-browser/issues){: .label .label-red }
 [{{ site.MICROFIRMWARE_BROWSER_VERSION }}](){: .label .label-purple }
 
+<img src="/sidecartridge-multidevice/assets/images/browser-icon.png" alt="SidecarTridge Multi-device File &amp; Download Manager icon" width="160" style="float: right; margin: 0 0 1rem 1.5rem;">
+
 This microfirmware app for the **SidecarTridge Multi-device** lets you browse and download floppy images from the public database, manage files on your microSD card, and even work directly with Atari ST disk images—all from a browser-based UI that runs on your phone, tablet, or desktop.
 
 <details open markdown="block">

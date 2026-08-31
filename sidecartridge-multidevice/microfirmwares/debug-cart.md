@@ -22,6 +22,8 @@ redirect_from:
 [Report BUG](https://github.com/sidecartridge/md-debug-cart/issues){: .label .label-red }
 [{{ site.MICROFIRMWARE_DEBUG_CART_VERSION }}](){: .label .label-purple }
 
+<img src="/sidecartridge-multidevice/assets/images/debug-cart-icon.png" alt="SidecarTridge Debug Cart icon" width="160" style="float: right; margin: 0 0 1rem 1.5rem;">
+
 
 This microfirmware repurposes the SidecarTridge Multi-device as a **debug output cartridge** for Atari ST-family computers.
 

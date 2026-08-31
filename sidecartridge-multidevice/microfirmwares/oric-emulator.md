@@ -24,6 +24,8 @@ redirect_from:
 [Report BUG](https://github.com/sidecartridge/md-oric/issues){: .label .label-red }
 [{{ site.MICROFIRMWARE_ORIC_EMULATOR_VERSION }}](){: .label .label-purple }
 
+<img src="/sidecartridge-multidevice/assets/images/oric-emulator-icon.png" alt="SidecarTridge Multi-device Oric Computer Emulator icon" width="160" style="float: right; margin: 0 0 1rem 1.5rem;">
+
 This microfirmware app for the **SidecarTridge Multi-device platform** emulates an
 **Oric** computer in the Atari ST class of machines. 
 

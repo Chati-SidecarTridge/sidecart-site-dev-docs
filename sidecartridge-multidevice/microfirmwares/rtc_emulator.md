@@ -20,6 +20,8 @@ redirect_from:
 [Report BUG](https://github.com/sidecartridge/md-rtc-emulator/issues){: .label .label-red }
 [{{ site.MICROFIRMWARE_RTC_EMULATOR_VERSION }}](){: .label .label-purple }
 
+<img src="/sidecartridge-multidevice/assets/images/rtc_emulator-icon.png" alt="SidecarTridge Multi-device Real Time Clock Emulator icon" width="160" style="float: right; margin: 0 0 1rem 1.5rem;">
+
 This is a microfirmware application for the **SidecarTridge Multi-device**, designed to emulate a Real Time Clock (RTC) for Atari computers, including the **Atari ST, STe, Mega ST, and Mega STe**.
 
 <details open markdown="block">

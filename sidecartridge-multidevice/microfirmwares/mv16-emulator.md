@@ -19,6 +19,8 @@ redirect_from:
 [Report BUG](https://github.com/sidecartridge/md-mv16-emulator/issues){: .label .label-red }
 [{{ site.MICROFIRMWARE_MV16_EMULATOR_VERSION }}](){: .label .label-purple }
 
+<img src="/sidecartridge-multidevice/assets/images/mv16-emulator-icon.png" alt="SidecarTridge Multi-device MV16 Emulator icon" width="160" style="float: right; margin: 0 0 1rem 1.5rem;">
+
 This is a microfirmware application for the **SidecarTridge Multi-device**, designed to emulate the **MV-16 audio device** for Atari computers, including the **Atari ST, STe, Mega ST, and Mega STe**.
 
 The original **MV-16** was a small expansion cartridge bundled with the game **B.A.T.** and capable of playing sampled sounds with up to **16 voices**. This microfirmware recreates that hardware behavior and routes the resulting audio to a **Bluetooth audio stream**.
