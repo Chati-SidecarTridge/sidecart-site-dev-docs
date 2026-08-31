@@ -27,6 +27,8 @@ redirect_from:
 [Report BUG](https://github.com/sidecartridge/md-MIDI2IP/issues){: .label .label-red }
 [{{ site.MICROFIRMWARE_MD_MIDI2IP_VERSION }}](){: .label .label-purple }
 
+<img src="/sidecartridge-multidevice/assets/images/midi-to-ip-icon.png" alt="MIDI-to-IP icon" width="160" style="float: right; margin: 0 0 1rem 1.5rem;">
+
 **MIDI-to-IP** redirects the Atari ST's MIDI IN and OUT traffic to a network endpoint, so games and tools that talk to the ST's MIDI port can run over Wi-Fi / TCP instead of a real MIDI cable. The firmware hooks the BIOS device-3 calls (`Bconstat` / `Bconin` / `Bconout`) and carries every byte over the cartridge bus to a small Python orchestrator that relays them around a virtual ring. The headline target is **MIDI Maze**, the mid-1980s networked first-person shooter for the Atari ST: with one orchestrator on the LAN, up to 16 STs (real or emulated) play together over IP, without a single MIDI cable in the room.
 
 {: .important }

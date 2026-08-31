@@ -19,6 +19,8 @@ redirect_from:
 [Report BUG](https://github.com/sidecartridge/md-rom-emulator/issues){: .label .label-red }
 [{{ site.MICROFIRMWARE_ROM_EMULATOR_VERSION }}](){: .label .label-purple }
 
+<img src="/sidecartridge-multidevice/assets/images/rom_emulator-icon.png" alt="SidecarTridge Multi-device ROM Emulator icon" width="160" style="float: right; margin: 0 0 1rem 1.5rem;">
+
 This is a microfirmware application for the **SidecarTridge Multi-device**, designed to emulate a ROM cartridge for Atari computers, including the **Atari ST, STe, Mega ST, and Mega STe**.
 
 {: .note }

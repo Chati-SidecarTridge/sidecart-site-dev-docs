@@ -21,6 +21,8 @@ redirect_from:
 [Report BUG](https://github.com/sidecartridge/md-devops/issues){: .label .label-red }
 [{{ site.MICROFIRMWARE_DEVOPS_VERSION }}](){: .label .label-purple }
 
+<img src="/sidecartridge-multidevice/assets/images/devops-icon.png" alt="SidecarTridge DevOps icon" width="160" style="float: right; margin: 0 0 1rem 1.5rem;">
+
 
 This microfirmware turns the cartridge slot of an Atari ST / STE / Mega ST(E) into a remote development surface for the m68k. While booted, the cartridge emulates a ROM, mounts a microSD subdirectory as a GEMDOS drive (GEMDRIVE), and exposes a Wi-Fi HTTP API plus a Python CLI that lets a workstation upload and download files, launch programs, load and step through them in pieces, switch screen resolution, snapshot ST memory, and stream debug bytes from the running m68k in real time.
 

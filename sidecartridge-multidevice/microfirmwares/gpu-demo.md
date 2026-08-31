@@ -21,6 +21,8 @@ redirect_from:
 [Report BUG](https://github.com/sidecartridge/md-gpu-demo/issues){: .label .label-red }
 [{{ site.MICROFIRMWARE_GPU_DEMO_VERSION }}](){: .label .label-purple }
 
+<img src="/sidecartridge-multidevice/assets/images/gpu-demo-icon.png" alt="SidecarTridge Multi-device GPU Demo icon" width="160" style="float: right; margin: 0 0 1rem 1.5rem;">
+
 This microfirmware app for the **SidecarTridge Multi-device** is a demoscene-oriented showcase of what the RP2040 in the SidecarT can do when it acts as a graphics co-processor for a real Atari ST, STE, Mega ST or Mega STE. From v2.0.0beta onwards it is no longer a single sprite stress test: it is a small intro / demo playground with an animated boot menu and four worked demos that exercise rotozoom, parallax, filled 3D vectors, sprite swarms and sampled audio.
 
 The whole thing is built on top of the [md-framebuffer-template](https://github.com/sidecartridge/md-framebuffer-template) starter framework, so every effect here is also a working reference you can use as the foundation of your own SidecarT app, including full-blown games that want to squeeze every cycle out of the RP2040.
