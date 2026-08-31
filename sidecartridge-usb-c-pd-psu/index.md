@@ -47,6 +47,8 @@ The board is powered by a USB-C PD charger that must provide either 15 V or 20 V
 | Raspberry Pi | P4123 - 27W USB-C Power Adapter      | 27 W         | OK with 15V. With STE computers fails to deliver enough power. |
 | Raspberry Pi | P5224 - 45W USB-C Power Adapter      | 45 W         | OK. Cheapest option with remarkable quality. |
 
+> **Note (August 2026):** After more than 200 units sold, this list has fallen a bit behind. In practice, any GaN PD 3.0 charger that can deliver 60 W will work for the ST, STE and MegaST. A 45 W charger will power the ST and MegaST, and with a bit of luck the STE too.
+
 
 ## How to select the 15 V or 20 V profile
 
