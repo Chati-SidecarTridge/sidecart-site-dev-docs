@@ -37,7 +37,7 @@ In **Manager mode**, the Booster app will automatically connect to your configur
 
 Starting with Booster v2.1.0, if Wi-Fi negotiations fail the Manager falls back to an offline-safe mode: the Atari ST terminal remains active so you can still boot the microfirmwares that are already downloaded. Press `ESC` on the terminal to enter the apps workflow, or hold any `SHIFT` key to keep booting from GEMDOS without touching the web UI.
 
-If your DHCP network supports a DNS with `.local` domains, you can access the web interface using `http://sidecart.local`. Otherwise, use the IP address assigned by your DHCP server and visible on your computer screen.
+If your network supports mDNS (`.local` domains), you can access the web interface at `http://sidecart.local`. Otherwise, use the IPv4 address shown on the Multi-device screen. See [Network requirements](https://docs.sidecartridge.com/sidecartridge-multidevice/getting_started_v2/#network) in the Getting Started guide for details on how the device obtains its IP address (DHCP by default; static IPv4 is also supported).
 
 The Atari ST Manager screen and the shared web status banner also show live Wi-Fi signal strength and the Pico W MAC address, and Booster replies to ICMP ping requests while connected so network troubleshooting is easier.
 
@@ -92,7 +92,7 @@ The **Network view** shows the list of available WiFi networks and permits some 
 - **Hostname**: The hostname of the device. This is used to identify the device on the network. By default is `sidecart`. 
 - **Wifi Power**: The power of the WiFi module. From 0 to 4. 
 - **Show RSSI**: Show the RSSI value in dBm for visible WiFi networks. This helps estimate signal strength and connection stability.
-- **DHCP Enabled**: Enable or disable DHCP on the device. When disabled, the TCP/IP settings view lets you enter a static IPv4 address, netmask, gateway, and DNS servers.
+- **DHCP Enabled**: Enable or disable DHCP on the device. Enabled by default, which works out of the box on any home or small-office network. Disable it only if your network has no DHCP server (industrial VLANs, isolated segments, captive portals): the TCP/IP settings view will then let you enter a static IPv4 address, netmask, gateway, and DNS servers.
 
 When **Show RSSI** is enabled, the device can show the RSSI value of nearby WiFi networks. As a general reference, use the first matching threshold in the table below.
 

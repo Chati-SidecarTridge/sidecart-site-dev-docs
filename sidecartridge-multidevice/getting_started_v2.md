@@ -104,6 +104,14 @@ Since revision 3.1 of the board, the Raspberry Pi Pico W can be directly soldere
 
 - Since firmware version 2.0, a microSD card [formatted as FAT32 or exFAT](https://docs.sidecartridge.com/sidecartridge-multidevice/how_to_v2/#format-the-microsd-card) is required.
 
+### Network
+
+The Multi-device connects to a **2.4 GHz Wi-Fi network** (5 GHz is not supported by the onboard Raspberry Pi Pico W hardware) with internet access. During normal operation it downloads microfirmware images from the SidecarTridge CDN over HTTPS, so outbound HTTP/HTTPS traffic must be allowed on the network.
+
+By default the Multi-device obtains its IP address, gateway, and DNS servers via **DHCP**. This is the standard behaviour of every home and small-office router, so no additional configuration is required: no static IP, no port forwarding, and no router reservation.
+
+Networks without a DHCP server (industrial VLANs, captive portals, isolated segments) are also supported. In that case, configure a static IPv4 address from the Booster web interface: open **Network view**, disable the **DHCP Enabled** toggle, and enter the IPv4 address, netmask, gateway, and DNS servers provided by your network administrator. See the [Network view section of the User Guide](https://docs.sidecartridge.com/sidecartridge-multidevice/userguide_v2/#network-view) for details.
+
 ## Initial Setup and Configuration
 
 ### Firmware Installation
