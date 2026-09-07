@@ -287,6 +287,15 @@ redirect_from:
     </div>
   </div>
 
+  <div class="cases-card">
+    <div class="cases-card-media"><img src="https://media.printables.com/media/prints/a309fb3e-a39a-484d-acc3-6b0fba8ae002/images/13761468_18f4c558-4f05-4499-9dd5-c1364a48ded5_820ced85-67bb-4c59-a643-e418b4d280d5/thumbs/inside/1600x1200/jpg/pxl_20260906_174925189.webp" alt="V3 Shell with cutout for Pico by @StephenBlyth_4800925" loading="lazy"></div>
+    <div class="cases-card-body">
+      <div class="cases-card-head"><h4 class="cases-card-title">V3 Shell with cutout for Pico</h4><span class="cases-card-source">Printables</span></div>
+      <p class="cases-card-desc"><strong>By @StephenBlyth_4800925</strong> A remix of Jarp's Fusion 360 shell with a cut-out for the Pico if it's fitted on headers. Only the top part is changed, reusing the original bottom.</p>
+      <div class="cases-card-actions"><a class="cases-btn" href="https://www.printables.com/model/1835941-sidecartridge-v3-shell-with-cutout-for-pico-on-hea" target="_blank" rel="noopener">View on Printables <span class="arrow">&rarr;</span></a></div>
+    </div>
+  </div>
+
 </div>
 
 ## Want to contribute?
