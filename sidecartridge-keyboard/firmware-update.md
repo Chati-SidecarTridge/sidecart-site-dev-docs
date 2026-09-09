@@ -56,7 +56,7 @@ Make sure you select the firmware intended for the keyboard emulator.
 
 If you are using a Chromium-based browser, you can update the firmware directly from the official web installer page:
 
-[https://sidecartridge.com/assets/html/sidecartridge-firmware-installer.html](https://sidecartridge.com/assets/html/sidecartridge-firmware-installer.html)
+[https://webflash.sidecartridge.com/](https://webflash.sidecartridge.com/)
 
 This method does not require any extra application or flashing tool.
 

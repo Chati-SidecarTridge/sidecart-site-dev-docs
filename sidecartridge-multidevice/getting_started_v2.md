@@ -123,7 +123,7 @@ Starting in version **v2.0.6Beta** you don't need to download the newer firmware
 
 This is the easiest method and works on Windows, macOS and Linux without installing anything. It uses [WebUSB](https://github.com/sidecartridge/rp-webusb-picoflash), so you need a Chromium-based browser such as Google Chrome or Microsoft Edge. Firefox and Safari are not supported.
 
-1. Open the [SidecarTridge Firmware Installer](https://sidecartridge.com/assets/html/sidecartridge-firmware-installer.html) in Chrome or Edge.
+1. Open the [SidecarTridge Firmware Installer](https://webflash.sidecartridge.com/) in Chrome or Edge.
 2. Unplug the Raspberry Pi Pico W, hold the **BOOTSEL** button, plug the micro USB cable back into your computer, and then release the **BOOTSEL** button. Your computer should recognize the device as the mass storage device `RPI-RP2` (RP2040) or `RP2350`.
 3. In the installer, select the device family and the firmware version, then click **Detect MCU** and grant USB access when the browser asks for it.
 4. Click **Flash Start**. You can leave the **Erase before write** and **Verify after write** options enabled for a clean install.
