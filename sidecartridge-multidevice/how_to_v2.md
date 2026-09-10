@@ -116,6 +116,29 @@ Starting with Booster v2.1.0, if the WiFi negotiation fails the Manager falls ba
 
 If you need to reconfigure the WiFi from scratch, follow the [Reset the WiFi configuration](#reset-the-wifi-configuration-and-return-to-factory-mode) procedure above.
 
+## Improve the WiFi signal and stability
+
+If the device connects but downloads fail intermittently or the connection drops, a weak or unstable WiFi signal is the most common cause. All the relevant settings live in the [Network view](/sidecartridge-multidevice/userguide_v2/#network-view) of the Booster web interface:
+
+- **Country**: the default is the worldwide profile. Select your actual country so the WiFi module uses the channels and frequencies allowed in your region, which usually improves signal quality.
+- **Wifi Power**: adjusts the power profile of the WiFi module, from 0 to 4. Higher values keep the radio fully powered, which improves stability during long downloads at the cost of some extra power consumption.
+- **Show RSSI**: enable it to display the signal strength in dBm of the visible networks. Use the value reported by the device itself, not the one shown by your phone or laptop: each radio measures its own reception, and the device is the one doing the downloads.
+
+Remember to click **Save** after changing any of these settings, and power the device off and on so they take effect.
+
+General measures that also help: move the router or the computer closer, avoid metal enclosures or shelves between them, and reduce interference from other 2.4 GHz sources.
+
+### Download apps with the device outside the computer
+
+When the WiFi signal at the computer's location is too weak to complete downloads, you can provision the device right next to the router:
+
+1. Power off the computer and remove the device from the cartridge port.
+2. Power the device on its own with a micro-USB cable, close to the router.
+3. Open the Booster web interface from a browser at `http://sidecart.local` (or the device IP address).
+4. Download every microfirmware app you need from the [Apps view](/sidecartridge-multidevice/userguide_v2/#apps-view).
+5. Power off the device, install it back in the cartridge port and boot the computer.
+6. Launch the downloaded apps from the Booster menu. Launching an already-downloaded app does not need WiFi.
+
 ## Verify the device hardware with the test ROM
 
 If you suspect a hardware problem with the device or with the connection to the cartridge port of your computer, you can run the **Multidevice Test** suite before drawing any conclusion. The test performs several read tests against the emulated ROM banks and shows the results on screen, which helps discriminate between a faulty device, a dirty or damaged cartridge port, and a software issue.
@@ -151,4 +174,22 @@ You can turn any Atari ST program into a cartridge ROM image with the [SidecarTr
 Copy the resulting `.ROM` file to the `/roms` folder of the microSD card and the [ROM Emulator microfirmware](/sidecartridge-multidevice/microfirmwares/rom_emulator/) will run it like a physical cartridge.
 
 If you want to share your program with the community, you can also submit the resulting ROM to the [public ROM database](/sidecartridge-multidevice/publicromdb/).
+
+## Wire external RESET and SELECT buttons
+
+If you are building a custom enclosure and want to expose the RESET and SELECT buttons on the outside, boards from [revision 2.2.0](/sidecartridge-multidevice/revisions/#revision-220) onward provide two dedicated connectors for external buttons.
+
+The connector specification, identical for both buttons:
+
+- Family: **JST SH**
+- Pin count: **2**
+- Pitch: **1.0 mm**
+- Board side: male header (SMT)
+- Cable side: JST SH 2-pin 1.0 mm female housing with crimped contacts
+
+The switch is a simple short between the two pins, so polarity does not matter. Any momentary tact switch wired to a JST SH 2-pin 1.0 mm female connector will work; pre-crimped cables are widely available from parts suppliers (housing `SHR-02V-S-B` with `SSH-003T-P0.2` contacts, or compatible).
+
+We also sell a [wired pushbutton with the right connector already crimped](https://store.sidecartridge.com/products/push-button-switch-with-jst-sh-2x-1mm-female-connectors): momentary action, 7 mm mounting hole, nut and washer included.
+
+Earlier board revisions (2.0 and 2.1) used a different button arrangement, so this section does not apply to them.
 
