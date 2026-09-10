@@ -86,6 +86,27 @@ $base-button-color: $brand-cream-2;
 // Nav (left sidebar tree)
 $nav-child-link-color: $brand-indigo-2;
 
+// Content links. Because $link-color matches the body text, the underline is
+// the only cue that something is a link, and the theme's default decoration
+// color is the light border grey, which vanishes on the cream surface. Draw
+// the underline in the link's own colour with a bit more weight and offset,
+// and shift to the brick red on hover so the affordance is unmistakable.
+// currentColor (instead of a fixed indigo) keeps the underline legible for
+// the recoloured links inside the inverted callouts (peach / cream on dark
+// surfaces). Mail links are excluded so the .support-note CTA pill on the
+// home page keeps its no-underline treatment.
+.main-content a:not(.btn, [href^="mailto:"]) {
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 0.09em;
+  text-underline-offset: 0.18em;
+
+  &:hover {
+    color: $brand-warning;
+    text-decoration-color: currentColor;
+  }
+}
+
 // Code
 $code-background-color: $brand-cream-2;
 $feedback-color: $brand-peach;
@@ -242,6 +263,11 @@ $search-result-preview-color: $brand-indigo-2;
 // on the warning brick red, peach loses contrast, so links go full cream.
 :is(p, ul, ol, blockquote, dl).important a { color: $brand-peach; }
 :is(p, ul, ol, blockquote, dl).warning a { color: $brand-cream; }
+// Keep those colours on hover too: the global content-link hover turns links
+// brick red, which would disappear against the warning surface and jar on
+// the indigo one.
+:is(p, ul, ol, blockquote, dl).important a:hover { color: $brand-cream; }
+:is(p, ul, ol, blockquote, dl).warning a:hover { color: $brand-peach; }
 
 } // end .main-content
 
