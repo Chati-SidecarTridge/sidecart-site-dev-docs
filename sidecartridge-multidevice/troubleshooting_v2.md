@@ -46,15 +46,47 @@ If the Multi-device board is not detected by the computer, please check the foll
 2. If the LED blinks upon booting, next connect the Pico W to the Multi-device headers and perform the same operation. The green LED should blink in this case too. If it doesn't, there might be a short circuit on the Multi-device board.
 3. Lastly, try connecting the Multi-device to the computer. It is highly recommended cleaning the Multi-device cartridge connector with isopropyl alcohol before doing this. If the LED does not blink in this case, there might be a short circuit on the Multi-device board. If the LED blinks, the Multi-device board is working fine and the issue is with the cartridge connector on the computer.
 
+### The computer resets continuously, or only the red LED lights up and the green Pico LED stays off
+
+This symptom set usually appears in some combination:
+
+- Only the red LED on the Multi-device board lights up; the green LED on the Pico W stays off.
+- The computer keeps booting into TOS instead of showing the Multi-device screen, or resets continuously.
+- The `SIDECART` WiFi network appears only intermittently, or not at all.
+- The computer boots normally to TOS when the Multi-device is NOT inserted.
+
+Before assuming the board is faulty, note that if the board were dead, the red LED would not light up either. This pattern almost always points to a problem on the computer side: a degraded power supply that can no longer deliver the current the device needs, an oxidized or worn cartridge edge connector (often unused for decades), or a device that is not perfectly seated in the slot.
+
+Follow these steps in order and note the outcome of each one:
+
+1. Reflash the firmware with the [web installer](https://sidecartridge.com/assets/html/sidecartridge-firmware-installer.html), with both **Erase the flash content** and **Verify after writing** enabled. At the end of the flashing process the green LED on the Pico W must turn on. If it does not, the board itself is faulty: contact support.
+2. Confirm the Pico W powers up from USB alone: unplug and re-plug the micro-USB cable. The green LED must light up on USB power, with no microSD card needed.
+3. Insert the Multi-device in the cartridge port, fully seated and without tilt. A reset loop is a classic symptom of a bad insertion or of a worn cartridge connector.
+4. Disconnect every external peripheral (external hard disk, floppy drive and so on). Continuous resets can also be a symptom of insufficient current from the power supply.
+5. Power on the computer. Both LEDs should light up and the Multi-device screen should appear. If the machine boots into TOS instead, press the RESET button of the computer.
+
+How to interpret the result after step 5:
+
+| Observation | Likely root cause |
+|---|---|
+| No green LED | Power delivery from the cartridge port to the device: the computer power supply or the port itself. |
+| Red LED off, flickering or dim | Same: insufficient power reaching the device. |
+| Both LEDs on but the computer keeps booting into TOS or resets constantly | Data or address bus pins of the cartridge connector: contacts dirty or oxidized. |
+
+If the diagnosis points to power delivery, test with a known-good power supply, for example our [drop-in PSU replacement](/sidecartridge-psu/). If it points to dirty contacts, clean both the cartridge connector of the computer and the edge connector of the device with isopropyl alcohol and a soft brush, then insert and remove the device a few times to scrub the contacts. If none of the steps above explains the failure, contact support with the outcome of each step.
 
 ### microSD card not detected
 
 If the microSD card is not detected, please check the following:
 
-1. To use the Multi-device effectively, your microSD card needs to be formatted in FAT32 or exFAT. **We strongly recommend using a high-quality SDHC, SDXC or SDUC microSD from a reputable brand** to ensure optimal performance and reliability. To format the microSD card, you can use the [SD Card Formatter](https://www.sdcard.org/downloads/formatter/) tool available for PC/Mac/Linux.
-2. Check that the microSD card is properly inserted in the microSD card slot. The microSD card should be inserted with the label facing up. The microSD card should be inserted until it clicks. 
-4. Do not power on the Multi-device until the microSD card is properly inserted. If the microSD card is not properly inserted, the Multi-device will not be able to detect it.
-5. In the Booster app, information about the microSD card is displayed at the bottom of the screen with the space available and the number of files in the folders. If the information is not displayed, the Multi-device is not able to detect the microSD card.
+1. **Only SDHC, SDXC and SDUC cards are supported.** Old SD standard cards of 2GB or less are not supported and will not be detected, no matter how they are formatted. If you are reusing an old card from a drawer, check its capacity class first.
+2. To use the Multi-device effectively, your microSD card needs to be formatted in FAT32 or exFAT. **We strongly recommend using a high-quality SDHC, SDXC or SDUC microSD from a reputable brand** to ensure optimal performance and reliability. To format the microSD card, you can use the [SD Card Formatter](https://www.sdcard.org/downloads/formatter/) tool available for PC/Mac/Linux.
+3. **The card must use the standard layout with a single partition.** Cards with multiple partitions are not supported. If your card has more than one partition, repartition it with a single partition, or simply reformat it with the [SD Card Formatter](https://www.sdcard.org/downloads/formatter/) tool, which restores the standard single-partition layout.
+4. Check that the microSD card is properly inserted in the microSD card slot. The microSD card should be inserted with the label facing up. The microSD card should be inserted until it clicks. 
+5. Do not power on the Multi-device until the microSD card is properly inserted. If the microSD card is not properly inserted, the Multi-device will not be able to detect it.
+6. In the Booster app, information about the microSD card is displayed at the bottom of the screen with the space available and the number of files in the folders. If the information is not displayed, the Multi-device is not able to detect the microSD card.
+7. Test the card on a PC or Mac with an SD card reader. If the computer cannot mount it either, the card itself is the problem: copy off any important files and reformat it, or replace it.
+8. If the Multi-device is inside a 3D-printed case, check that the case is not preventing the card from seating fully in the slot. If the problem disappears with the device outside the enclosure, adjust the case tolerances.
 
 ## Network issues
 
@@ -131,25 +163,13 @@ If RSSI is marginal or worse, move the Atari ST closer to the access point, remo
 
 ## Restoring factory settings
 
-If you need to restore the factory settings of the Multi-device, you can do it by following these steps:
+The full procedures are documented in the How to section; in short, there are three ways, from least to most invasive:
 
-### Pressing the SELECT button for more than 10 seconds
+1. **From the Booster web interface**: the [Device view](/sidecartridge-multidevice/userguide_v2/#device-view) has a **Restore to the default fabric settings** button. See [Reset the WiFi configuration and return to Factory mode](/sidecartridge-multidevice/how_to_v2/#reset-the-wifi-configuration-and-return-to-factory-mode).
+2. **With the SELECT button**: press and hold SELECT for more than 10 seconds, no matter which app is running, then power the device off and on. If it does not work, try holding SELECT for more than 10 seconds while powering on the computer. Described in the same [How to section](/sidecartridge-multidevice/how_to_v2/#reset-the-wifi-configuration-and-return-to-factory-mode).
+3. **Reflashing or fully erasing the firmware**: when the two options above fail, [update the firmware](/sidecartridge-multidevice/how_to_v2/#update-the-firmware) or, as a last resort, [fully erase the flash of the device](/sidecartridge-multidevice/how_to_v2/#fully-erase-the-flash-of-the-device).
 
-It does not matter if the Multi-device runs the Booster app or any of the available Microfirmware apps, pressing the SELECT button for more than 10 seconds will restore the factory settings of the Multi-device. 
-
-After powering off and on again, the classic factory settings screen will be displayed, allowing you to reconfigure the Multi-device from scratch as described in the [Initial Factory Configuration](/sidecartridge-multidevice/getting_started_v2/#initial-factory-configuration) section.
-
-If the SELECT button does not work, please try powering on the Atari ST while holding the SELECT button pressed for more than 10 seconds. 
-
-If for any reason the SELECT button does not work, you can reflash the firmware of the Multi-device as described below.
-
-### Reflashing the firmware
-
-If for any reason the above method does not work, you can reflash the firmware of the Multi-device by following the instructions in the [Firmware Installation](/sidecartridge-multidevice/getting_started_v2/#firmware-installation) section.
-
-### Restore from the Bosster app
-
-In the configuration section of the Booster app, there is an option to restore the factory settings of the Multi-device. After restoring the factory settings, the Multi-device will reboot and the classic factory settings screen will be displayed, allowing you to reconfigure the Multi-device from scratch as described in the [Initial Factory Configuration](/sidecartridge-multidevice/getting_started_v2/#initial-factory-configuration) section.
+In all cases, after the reset the classic factory settings screen is displayed and you can reconfigure the Multi-device from scratch as described in the [Initial Factory Configuration](/sidecartridge-multidevice/getting_started_v2/#initial-factory-configuration) section.
 
 ## Floppy emulation
 
