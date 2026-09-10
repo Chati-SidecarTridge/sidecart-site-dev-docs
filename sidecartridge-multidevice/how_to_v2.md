@@ -65,6 +65,20 @@ If the web installer does not detect your board or your browser does not support
 3. Copy the downloaded `.uf2` file corresponding to your Raspberry Pi Pico W into the `RPI-RP2` drive. Wait for the file to be copied.
 4. Disconnect the USB cable. The new firmware has now been flashed.
 
+## Fully erase the flash of the device
+
+Sometimes the device can end up with corrupted information in the areas of the flash memory used for the global configuration of the device. If you run into persistent problems that a firmware reinstall does not fix, a good option is to completely erase the content of the flash memory and start from scratch.
+
+The easiest way to do this is with the well-known `flash_nuke` firmware from Raspberry Pi, a tiny program that erases the entire flash memory of the board. It is part of the official [pico-examples repository](https://github.com/raspberrypi/pico-examples/tree/master/flash/nuke) and Raspberry Pi publishes a ready-to-use binary.
+
+1. Download the [flash_nuke.uf2](https://datasheets.raspberrypi.com/soft/flash_nuke.uf2) file from Raspberry Pi. This universal build works on both RP2040 and RP2350 boards.
+2. Put the board in BOOTSEL mode as described in the manual update procedure above: connect the USB cable while holding the **BOOTSEL** button, until the `RPI-RP2` drive appears on your computer.
+3. Copy the `flash_nuke.uf2` file into the `RPI-RP2` drive. Wait for the file to be copied. The board will erase the entire flash memory and reboot back into BOOTSEL mode, so the `RPI-RP2` drive will appear again.
+4. Install the firmware from scratch using the [web installer](#option-2-using-the-browser-based-web-installer) or the [manual procedure](#option-3-manual-update-when-the-web-installer-does-not-work) described above.
+
+{: .warning }
+This operation deletes everything stored in the flash memory of the device: the firmware, the global configuration, and any microfirmware apps installed in flash. After the erase you must reinstall the firmware and configure the device again from scratch, including the WiFi settings.
+
 ## Format the microSD card
 
 To use the Multi-device effectively, your microSD card needs to be formatted in FAT32 or exFAT. **We strongly recommend using a high-quality SDHC, SDXC or SDUC microSD from a reputable brand** to ensure optimal performance and reliability. To format the microSD card, you can use the [SD Card Formatter](https://www.sdcard.org/downloads/formatter/) tool available for PC/Mac/Linux.
