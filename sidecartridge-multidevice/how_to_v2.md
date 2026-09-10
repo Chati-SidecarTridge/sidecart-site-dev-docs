@@ -81,7 +81,15 @@ This operation deletes everything stored in the flash memory of the device: the 
 
 ## Reset the WiFi configuration and return to Factory mode
 
-If you need to reconfigure the WiFi of the device from scratch, for example after changing your router or moving the device to another network, you can reset it to **Factory mode**:
+If you need to reconfigure the WiFi of the device from scratch, for example after changing your router or moving the device to another network, you can reset it to **Factory mode**. There are two ways to do it.
+
+### Option 1: From the Booster web interface (easiest)
+
+If the device is still reachable on the network, open the Booster web interface and go to the [Device view](/sidecartridge-multidevice/userguide_v2/#device-view). At the bottom of the view there is a **Restore to the default fabric settings** button: click it and the device reboots and loads the Booster app in **Factory mode**. Then continue with step 3 below to reconfigure the WiFi.
+
+### Option 2: With the SELECT button
+
+Use this option when the device is not reachable over the network (for example, the WiFi credentials are no longer valid):
 
 1. With the device powered on, press and hold the **SELECT** button for more than 10 seconds.
 2. Power off and power on the device and the computer.
