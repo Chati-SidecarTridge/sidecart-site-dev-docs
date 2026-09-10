@@ -79,6 +79,42 @@ The easiest way to do this is with the well-known `flash_nuke` firmware from Ras
 {: .warning }
 This operation deletes everything stored in the flash memory of the device: the firmware, the global configuration, and any microfirmware apps installed in flash. After the erase you must reinstall the firmware and configure the device again from scratch, including the WiFi settings.
 
+## Reset the WiFi configuration and return to Factory mode
+
+If you need to reconfigure the WiFi of the device from scratch, for example after changing your router or moving the device to another network, you can reset it to **Factory mode**:
+
+1. With the device powered on, press and hold the **SELECT** button for more than 10 seconds.
+2. Power off and power on the device and the computer.
+3. The device starts in **Factory (Fabric) mode** and broadcasts its own WiFi network named `SIDECART` with password `sidecart`.
+4. Connect to the `SIDECART` network from a computer or smartphone and open `http://192.168.4.1` in a web browser.
+5. Select your WiFi network from the list, enter the password and click **Connect**. The device saves the credentials to flash memory, reboots and connects to your network.
+
+Once connected, the web interface is reachable at `http://sidecart.local` if your network supports mDNS, or at the IPv4 address shown on the computer screen. See the [Network view section of the User Guide](/sidecartridge-multidevice/userguide_v2/#network-view) for all the network configuration options.
+
+## What to do when the Booster cannot connect to WiFi
+
+If the Booster app fails to connect to your WiFi network, check the following points:
+
+- The device only supports **2.4 GHz WiFi networks**. 5 GHz networks are not supported by the onboard Raspberry Pi Pico W hardware, so make sure your router broadcasts a 2.4 GHz network and that you are selecting that one.
+- Check the signal strength. Enable the **Show RSSI** option in the [Network view](/sidecartridge-multidevice/userguide_v2/#network-view) to display the RSSI value in dBm of the visible WiFi networks. Below `-80 dBm` the signal is almost unusable: the board may fail to connect, lose the connection intermittently or take longer to obtain an IP address. Move the device closer to the access point or choose a network with a stronger signal.
+- While connected, the device replies to ICMP ping requests, so you can use `ping sidecart.local` (or the IP address shown on screen) from another computer to verify the connection.
+
+Starting with Booster v2.1.0, if the WiFi negotiation fails the Manager falls back to an offline-safe mode: the terminal on the Atari computer remains active so you can still boot the microfirmware apps that are already downloaded. Press `ESC` on the terminal to enter the apps workflow, or hold any `SHIFT` key to keep booting from GEMDOS without touching the web interface.
+
+If you need to reconfigure the WiFi from scratch, follow the [Reset the WiFi configuration](#reset-the-wifi-configuration-and-return-to-factory-mode) procedure above.
+
+## Verify the device hardware with the test ROM
+
+If you suspect a hardware problem with the device or with the connection to the cartridge port of your computer, you can run the **Multidevice Test** suite before drawing any conclusion. The test performs several read tests against the emulated ROM banks and shows the results on screen, which helps discriminate between a faulty device, a dirty or damaged cartridge port, and a software issue.
+
+1. Download the `TESTSCRT.TOS` and `TESTROM.BIN` files from the [md-testrom releases page](https://github.com/sidecartridge/md-testrom/releases) and copy both files to the same directory on your Atari computer.
+2. In the Booster web interface, find the **Multidevice Test** microfirmware in the Apps view, install it and launch it.
+3. Boot the Atari computer and run the `TESTSCRT.TOS` program. The full test run takes several minutes.
+4. A healthy device passes all the tests without errors. Any failing test points to a potential issue with the device, the connection to the cartridge port, or the computer itself.
+5. To return to the Booster app, press the **SELECT** button on the device.
+
+The [md-testrom repository](https://github.com/sidecartridge/md-testrom) documents the full procedure, including how to set up the device in blind mode when the computer does not boot with the device connected.
+
 ## Format the microSD card
 
 To use the Multi-device effectively, your microSD card needs to be formatted in FAT32 or exFAT. **We strongly recommend using a high-quality SDHC, SDXC or SDUC microSD from a reputable brand** to ensure optimal performance and reliability. To format the microSD card, you can use the [SD Card Formatter](https://www.sdcard.org/downloads/formatter/) tool available for PC/Mac/Linux.
@@ -86,4 +122,20 @@ To use the Multi-device effectively, your microSD card needs to be formatted in 
 {: .note }
 Always ensure you've selected the correct device to format, especially when working with disk utilities, to avoid data loss.
 {: .note }
+
+## Install or downgrade a specific version of a microfirmware app
+
+When the catalog exposes more than one version of a microfirmware app, the app card in the [Apps view](/sidecartridge-multidevice/userguide_v2/#apps-view) of the Booster web interface shows a **Version** dropdown. The newest version is selected by default, but you can pick any older version still published in the catalog. When the selected version is not the one currently installed, the card also indicates which version is already present on the device.
+
+The action button next to the app is context aware: it reads **Install**, **Update** or **Downgrade** depending on whether the selected version is new, newer than the installed one, or older than the installed one. Downgrading to an older version requires an explicit confirmation step.
+
+This is useful to roll back to a previous version of an app when you hit a regression, or to test a **Beta** version by switching the **Catalog channel** selector at the top of the Apps page.
+
+## Turn your own program into a cartridge ROM
+
+You can turn any Atari ST program into a cartridge ROM image with the [SidecarTridge USM web app](https://usm.sidecartridge.com). Drop a `.PRG` or `.TOS` file in your browser and download a ready-to-use 128 KB `.ROM` image. Everything runs locally in the browser, so there is nothing to install.
+
+Copy the resulting `.ROM` file to the `/roms` folder of the microSD card and the [ROM Emulator microfirmware](/sidecartridge-multidevice/microfirmwares/rom_emulator/) will run it like a physical cartridge.
+
+If you want to share your program with the community, you can also submit the resulting ROM to the [public ROM database](/sidecartridge-multidevice/publicromdb/).
 
