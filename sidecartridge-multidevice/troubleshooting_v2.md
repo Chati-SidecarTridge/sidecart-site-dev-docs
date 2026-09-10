@@ -79,12 +79,14 @@ If the diagnosis points to power delivery, test with a known-good power supply, 
 
 If the microSD card is not detected, please check the following:
 
-1. To use the Multi-device effectively, your microSD card needs to be formatted in FAT32 or exFAT. **We strongly recommend using a high-quality SDHC, SDXC or SDUC microSD from a reputable brand** to ensure optimal performance and reliability. To format the microSD card, you can use the [SD Card Formatter](https://www.sdcard.org/downloads/formatter/) tool available for PC/Mac/Linux.
-2. Check that the microSD card is properly inserted in the microSD card slot. The microSD card should be inserted with the label facing up. The microSD card should be inserted until it clicks. 
-4. Do not power on the Multi-device until the microSD card is properly inserted. If the microSD card is not properly inserted, the Multi-device will not be able to detect it.
-5. In the Booster app, information about the microSD card is displayed at the bottom of the screen with the space available and the number of files in the folders. If the information is not displayed, the Multi-device is not able to detect the microSD card.
-6. Test the card on a PC or Mac with an SD card reader. If the computer cannot mount it either, the card itself is the problem: copy off any important files and reformat it, or replace it.
-7. If the Multi-device is inside a 3D-printed case, check that the case is not preventing the card from seating fully in the slot. If the problem disappears with the device outside the enclosure, adjust the case tolerances.
+1. **Only SDHC, SDXC and SDUC cards are supported.** Old SD standard cards of 2GB or less are not supported and will not be detected, no matter how they are formatted. If you are reusing an old card from a drawer, check its capacity class first.
+2. To use the Multi-device effectively, your microSD card needs to be formatted in FAT32 or exFAT. **We strongly recommend using a high-quality SDHC, SDXC or SDUC microSD from a reputable brand** to ensure optimal performance and reliability. To format the microSD card, you can use the [SD Card Formatter](https://www.sdcard.org/downloads/formatter/) tool available for PC/Mac/Linux.
+3. **The card must use the standard layout with a single partition.** Cards with multiple partitions are not supported. If your card has more than one partition, repartition it with a single partition, or simply reformat it with the [SD Card Formatter](https://www.sdcard.org/downloads/formatter/) tool, which restores the standard single-partition layout.
+4. Check that the microSD card is properly inserted in the microSD card slot. The microSD card should be inserted with the label facing up. The microSD card should be inserted until it clicks. 
+5. Do not power on the Multi-device until the microSD card is properly inserted. If the microSD card is not properly inserted, the Multi-device will not be able to detect it.
+6. In the Booster app, information about the microSD card is displayed at the bottom of the screen with the space available and the number of files in the folders. If the information is not displayed, the Multi-device is not able to detect the microSD card.
+7. Test the card on a PC or Mac with an SD card reader. If the computer cannot mount it either, the card itself is the problem: copy off any important files and reformat it, or replace it.
+8. If the Multi-device is inside a 3D-printed case, check that the case is not preventing the card from seating fully in the slot. If the problem disappears with the device outside the enclosure, adjust the case tolerances.
 
 ## Network issues
 

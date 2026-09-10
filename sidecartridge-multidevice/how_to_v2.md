@@ -153,7 +153,7 @@ The [md-testrom repository](https://github.com/sidecartridge/md-testrom) documen
 
 ## Format the microSD card
 
-To use the Multi-device effectively, your microSD card needs to be formatted in FAT32 or exFAT. **We strongly recommend using a high-quality SDHC, SDXC or SDUC microSD from a reputable brand** to ensure optimal performance and reliability. To format the microSD card, you can use the [SD Card Formatter](https://www.sdcard.org/downloads/formatter/) tool available for PC/Mac/Linux.
+To use the Multi-device effectively, your microSD card needs to be formatted in FAT32 or exFAT, using the standard layout with a single partition. Cards with multiple partitions are not supported, and neither are old SD standard cards of 2GB or less: only SDHC, SDXC and SDUC cards work. **We strongly recommend using a high-quality SDHC, SDXC or SDUC microSD from a reputable brand** to ensure optimal performance and reliability. To format the microSD card, you can use the [SD Card Formatter](https://www.sdcard.org/downloads/formatter/) tool available for PC/Mac/Linux, which restores the standard single-partition layout.
 
 {: .note }
 Always ensure you've selected the correct device to format, especially when working with disk utilities, to avoid data loss.
