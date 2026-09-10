@@ -62,7 +62,7 @@ If the web installer does not detect your board or your browser does not support
 {: refdef}
 
 {:start="3"}
-3. Copy the downloaded `.uf2` file corresponding to your Raspberry Pi Pico W into the `RPI-RP2` drive. The board flashes itself and reboots automatically.
+3. Copy the downloaded `.uf2` file corresponding to your Raspberry Pi Pico W into the `RPI-RP2` drive. Wait for the file to be copied.
 4. Disconnect the USB cable. The new firmware has now been flashed.
 
 ## Format the microSD card
