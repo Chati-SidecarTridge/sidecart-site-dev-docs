@@ -99,6 +99,11 @@ If the Booster app fails to connect to your WiFi network, check the following po
 - Check the signal strength. Enable the **Show RSSI** option in the [Network view](/sidecartridge-multidevice/userguide_v2/#network-view) to display the RSSI value in dBm of the visible WiFi networks. Below `-80 dBm` the signal is almost unusable: the board may fail to connect, lose the connection intermittently or take longer to obtain an IP address. Move the device closer to the access point or choose a network with a stronger signal.
 - While connected, the device replies to ICMP ping requests, so you can use `ping sidecart.local` (or the IP address shown on screen) from another computer to verify the connection.
 
+If the device connects to the WiFi network but does not obtain an IP address, there are two usual causes:
+
+1. **The device cannot obtain an IP address from the DHCP server of the network.** This can happen because there is no DHCP server on the network, or because the router applies some kind of filter, such as MAC address filtering, that prevents the device from getting a lease. Check the DHCP and filtering configuration of your router, or configure a static IPv4 address from the [Network view](/sidecartridge-multidevice/userguide_v2/#network-view).
+2. **The authentication method is not correct.** The device tries to detect the authentication method of the network automatically, but in some networks you may need to select it manually. Note that the supported method is not necessarily the one announced by the router, so if the connection fails try the other authentication methods available.
+
 Starting with Booster v2.1.0, if the WiFi negotiation fails the Manager falls back to an offline-safe mode: the terminal on the Atari computer remains active so you can still boot the microfirmware apps that are already downloaded. Press `ESC` on the terminal to enter the apps workflow, or hold any `SHIFT` key to keep booting from GEMDOS without touching the web interface.
 
 If you need to reconfigure the WiFi from scratch, follow the [Reset the WiFi configuration](#reset-the-wifi-configuration-and-return-to-factory-mode) procedure above.
